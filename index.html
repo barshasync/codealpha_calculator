@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#EEF2E8">
+  <meta name="description" content="NUMÉRA — a thoughtfully designed calculator for everyday numbers.">
+  <title>NUMÉRA — Calculator No. 02</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="wordmark" href="#top" aria-label="NUMÉRA home">NUMÉRA<span>.</span></a>
+    <div class="header-tools">
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark theme" title="Toggle theme">
+        <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.7"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
+        <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 15.1A8.5 8.5 0 0 1 8.9 3.8 8.6 8.6 0 1 0 20.2 15.1Z"/></svg>
+      </button>
+      <span class="issue-label">DAILY TOOLS <i>/</i> 002</span>
+    </div>
+  </header>
+
+  <main id="top" class="page-main">
+    <section class="intro" aria-labelledby="page-title">
+      <p class="eyebrow">CALCULATOR <span>No. 02</span></p>
+      <h1 id="page-title">A little space<br class="mobile-break"> for numbers.</h1>
+      <p class="subtitle">Simple calculations, thoughtfully designed.</p>
+    </section>
+
+    <section class="calculator" aria-label="Calculator">
+      <div class="display" aria-live="polite" aria-atomic="true">
+        <div class="expression-line" id="expressionLine">&nbsp;</div>
+        <div class="current-value" id="currentValue">0</div>
+        <div class="preview-line" id="previewLine" aria-label="Live result preview">&nbsp;</div>
+      </div>
+      <div class="keypad" role="group" aria-label="Calculator keys">
+        <button class="key key-clear" data-action="clear" aria-label="Clear all">AC</button>
+        <button class="key key-delete" data-action="delete" aria-label="Delete last character">DEL</button>
+        <button class="key key-operator" data-value="%" aria-label="Percent">%</button>
+        <button class="key key-operator" data-value="÷" aria-label="Divide">÷</button>
+        <button class="key" data-value="7">7</button><button class="key" data-value="8">8</button><button class="key" data-value="9">9</button><button class="key key-operator" data-value="×" aria-label="Multiply">×</button>
+        <button class="key" data-value="4">4</button><button class="key" data-value="5">5</button><button class="key" data-value="6">6</button><button class="key key-operator" data-value="−" aria-label="Subtract">−</button>
+        <button class="key" data-value="1">1</button><button class="key" data-value="2">2</button><button class="key" data-value="3">3</button><button class="key key-operator" data-value="+" aria-label="Add">+</button>
+        <button class="key key-double" data-value="00">00</button><button class="key" data-value="0">0</button><button class="key" data-value="." aria-label="Decimal point">.</button><button class="key key-equals" data-action="equals" aria-label="Calculate">=</button>
+      </div>
+    </section>
+
+    <section class="history" aria-labelledby="history-title">
+      <div class="history-heading">
+        <div><p class="eyebrow">THE NOTEBOOK</p><h2 id="history-title">Recent calculations</h2></div>
+        <button class="clear-history" id="clearHistory" type="button">Clear history</button>
+      </div>
+      <div class="history-list" id="historyList" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Made with care, one calculation at a time.</p>
+    <span>CODEALPHA FRONTEND PROJECT</span>
+  </footer>
+</body>
+</html>
+
+
